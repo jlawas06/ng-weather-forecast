@@ -11,6 +11,11 @@ export const routes: Routes = [
         path: '',
         component: LandingComponent,
       },
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('./features/home/home.module').then((m) => m.HomeModule),
+      },
     ],
   },
 ];
