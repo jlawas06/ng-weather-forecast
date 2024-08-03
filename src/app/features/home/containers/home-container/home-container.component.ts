@@ -13,7 +13,7 @@ export class HomeContainerComponent {
 
   onSubmit(city: string) {
     if (city) {
-      this.router.navigate(['/weather'], { queryParams: { q: city } });
+      this.router.navigate(['/weather'], { queryParams: { city } });
     }
   }
 }

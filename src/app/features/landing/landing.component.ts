@@ -16,7 +16,6 @@ export class LandingComponent {
   ngOnInit(): void {
     this.auth.isAuthenticated$.subscribe({
       next: (isAuthenticated) => {
-        console.log('isAuthenticated', isAuthenticated);
         if (isAuthenticated) {
           this.router.navigateByUrl('/home');
         }
