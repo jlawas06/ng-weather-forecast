@@ -13,8 +13,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GetWeatherFormComponent {
-  @Output() submit = new EventEmitter<string>();
-  city: string = '';
+  @Output() submitted = new EventEmitter<string>();
 
   weatherForm: FormGroup;
 
@@ -32,7 +31,7 @@ export class GetWeatherFormComponent {
   onSubmit() {
     this.weatherForm.markAllAsTouched();
     if (this.weatherForm.valid) {
-      this.submit.emit(this.weatherForm.value.city);
+      this.submitted.emit(this.weatherForm.value.city);
     }
   }
 }
