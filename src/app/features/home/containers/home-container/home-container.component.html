@@ -1,0 +1,4 @@
+<div class="px-0 md:px-48">
+  <app-user-details *ngIf="auth.user$ | async as user" [user]="user" />
+  <app-get-weather-form (submit)="onSubmit($event)" />
+</div>

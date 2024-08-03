@@ -1,0 +1,19 @@
+<div class="bg-white shadow rounded-lg mb-8 p-6">
+  <div class="flex items-center justify-center space-x-4">
+    <img
+      [src]="user?.picture"
+      alt="User avatar"
+      class="rounded-full w-24 h-24"
+    />
+    <div>
+      <h2 class="text-xl font-semibold text-gray-800">{{ user?.name }}</h2>
+      <a
+        target="_blank"
+        href="{{ user?.nickname! | appGithubProfileUrl }}"
+        class="text-blue-500 hover:underline"
+      >
+        {{ user?.nickname! | appGithubProfileUrl }}
+      </a>
+    </div>
+  </div>
+</div>
