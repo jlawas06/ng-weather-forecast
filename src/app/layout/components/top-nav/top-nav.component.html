@@ -5,9 +5,12 @@
         <div class="flex flex-shrink-0 items-center">
           <img class="h-12 w-auto" src="logo.png" alt="Your Company" />
         </div>
-        <div class="ml-6 flex">
+        <div
+          class="ml-6"
+          [ngClass]="isAuthenticated ? 'hidden md:flex' : 'flex'"
+        >
           <a
-            href="javascript::void(0);"
+            routerLink="/"
             class="inline-flex items-center text-2xl px-1 font-medium text-gray-900"
             >Weather Forecast</a
           >
@@ -15,6 +18,8 @@
       </div>
       <div class="flex items-center">
         <button
+          *ngIf="isAuthenticated"
+          (click)="onLogout()"
           type="button"
           class="inline-flex items-center rounded-full border border-transparent bg-blue-600 px-5 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
