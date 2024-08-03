@@ -1,6 +1,30 @@
-# NgWeatherForecast
+# Weather Forecast
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+
+## Installation
+
+Install dependencies with npm
+
+```bash
+  npm install
+```
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your environment.{development}.ts file
+
+```bash
+export const environment = {
+  auth0Config: {
+    domain: '<DOMAIN>',
+    clientId: '<CLIENT_ID>',
+  },
+  weatherApiKey: '<API_KEY>',
+};
+
+```
+
 
 ## Development server
 
