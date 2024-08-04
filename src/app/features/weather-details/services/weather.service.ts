@@ -13,7 +13,7 @@ export class WeatherService {
   getWeatherDetailsByCity(city: string): Observable<IWeather> {
     return this.http
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${environment.weatherApiKey}`
+        `${environment.weatherApiEndpoint}?q=${city}&units=imperial&appid=${environment.weatherApiKey}`
       )
       .pipe(
         map((x: any) => {
